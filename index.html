@@ -3,20 +3,37 @@
 <meta charset="UTF-8">
 <head>
     <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <form class="formGroup">
-        <input type="text" id="codifica" name="codifica" placeholder="Digite aqui o texto para ser codificado.">
-        <button type="submit">Codificar</button>
+<header>
+    <!--    Colocar logo    -->
+    <h1>Alura</h1>
+</header>
+<main>
+    <form class="container">
+    <textarea class="principal-input" id="entrada" name="entrada"
+              placeholder="Digite aqui o texto para ser codificado."></textarea>
+        <span>
+        <img src="direct/vector.svg" alt="info icon" width="15px" height="15px">
+        <p>Apenas letras minúsculas e sem acento.</p>
+    </span>
+        <div class="botoes">
+            <button type="submit" id="codifica_button" name="codifica_button" value="codifica" class="btn-codifica" onclick="codifica()">Criptografar</button>
+            <button type="submit" id="decodifica_button" name="decodifica_button" value="decodifica" class="btn-decodifica" onclick="decodifica()">Descriptografar</button>
+        </div>
     </form>
-    <form class="formGroup">
-        <input type="text" id="texto" name="decodifica" placeholder="Digite aqui o texto codificado para ser decodificado">
-        <button type="submit">Decodificar</button>
-    </form>
-</div>
-<footer>
-    <p>Desenvolvido por: <a href="https://www.linkedin.com/in/van-romel-alves-sena-neto-b7323b160/" target="_blank">Van-Romel A S Neto</a></p>
-</footer>
+</main>
+<aside>
+    <div id="div-aside-no-msg">
+        <img src="direct/search-aside.svg" alt="info icon" width="80%">
+        <h3>Nenhuma mensagem encontrada</h3>
+        <p>Digite um texto que você deseja criptografar.</p>
+    </div>
+    <div class="msg" id="div-aside-msg">
+        <p class="text-value" id="text-value"></p>
+    </div>
+</aside>
+<script src="./script.js"></script>
 </body>
 </html>

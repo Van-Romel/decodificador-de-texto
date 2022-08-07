@@ -1,0 +1,136 @@
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        'header header header header aside aside'
+        'main main main main aside aside'
+        'main main main main aside aside'
+        'main main main main aside aside'
+        'main main main main aside aside';
+    gap: 10px;
+    padding: 10px;
+    background-color: #F3F5FC;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.principal-input {
+    width: 100%;
+    height: 400px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    font-size: 1.5em;
+    color: #0A3871;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #0A3871;
+    opacity: 1; /* Firefox */
+}
+
+span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0;
+}
+
+span p, span img {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+span p {
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #343A40;
+}
+
+aside div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: white;
+    border: rgb(0, 0, 0, 0%);
+    border-radius: 35px;
+}
+
+.msg{
+    min-width: 300px;
+    width: 80%;
+    padding: 15px;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: rgb(0, 0, 0, 0%);
+    border-radius: 35px;
+}
+
+button, .key-input{
+    margin-top: 5px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+button {
+    width: 48%;
+}
+
+.key-input {
+    color: #0A3871;
+    background-color: #D8DFE8;
+}
+
+.btn-codifica{
+    color: #FFFFFF;
+    background-color: #0A3871;
+}
+
+.btn-decodifica{
+    border: #0A3871 1px solid;
+    color: #0A3871;
+    background-color: #D8DFE8;
+}
+
+.msg {
+    display: none;
+}
